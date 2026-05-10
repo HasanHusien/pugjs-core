@@ -1,0 +1,53 @@
+doctype html
+html(lang='en')
+  head
+    title pugjs
+    include includs/style.pug
+  body
+    include includs/variables/variabel.pug
+    include includs/mixin/mixin.pug
+    //  start code 
+    div(class='main-container', id='main')
+      ul.my-skills
+        li PHP
+        li JS #{logo}
+        li SAss
+        li.spcial PugeJS<span> done </span>
+      ul(class ='used_For_loop') 
+        - for(i=1; i<= 10; i++)
+          li #{i} : #{logo}
+      +ourDrinks
+      +featurs('categoray')
+      +featurs('doram')  
+      //- doc 
+    div.the-speech
+      p#main Lorem <strong>ipsum</strong>
+        span :a
+      p.secound i love
+        
+        b  SAss 
+        |  And 
+        b  Pug 
+      p.inter interPolation #[b(class='bold') text] somathing 
+      |
+      | this is somthing,
+      //- i love variables idea is so usefull
+    div(class=theHead)
+    div='<b>Hello</b>World!'
+    div
+      p aim a itraions form variabls fill and i called #{itrations}
+    form
+      input(
+        type='text',
+        name='inp')
+      input(
+        type='text',
+        name='inp')  
+      input(
+        type='text', name='inp')
+      button(style={'background':'red','color':'white'}) send
+    include includs/scripts/js.pug
+  
+
+
+
